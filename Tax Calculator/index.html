@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tax Calculator</h1>
+        <form id="taxForm">
+            <div class="form-group">
+                <label for="income">Gross Annual Income (in Lakhs)</label>
+                <input type="number" id="income" >
+                <div class="error-icon" id="incomeError"></div>
+            </div>
+            <div class="form-group">
+                <label for="extraIncome">Extra Income (in Lakhs)</label>
+                <input type="number" id="extraIncome" >
+                <div class="error-icon" id="extraIncomeError"></div>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Deductions (in Lakhs)</label>
+                <input type="number" id="deductions">
+                <div class="error-icon" id="deductionsError"></div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age Group: </label>
+                <select id="age">
+                    <option value="">Select age group</option>
+                    <option value="Under 40">&lt;40</option>
+                    <option value="40 to 59">&ge;40 &lt;60</option>
+                    <option value="Above 60">&ge;60</option>
+                </select>
+                <div class="error-icon" id="ageError"></div>
+            </div>
+            <button type="submit">Calculate Tax</button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
